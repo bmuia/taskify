@@ -5,5 +5,19 @@
         <div class="create">
             <button><i class='bx bx-plus-medical'></i> Create</button>
         </div>
+        <div class="task-list">
+            <% if @tasks.any? %>
+                <ul>
+                    <% @tasks.each do |task| %>
+                        <li><strong><%= task.title %></strong>: <%= task.description %></li>
+                    <% end %>
+                </ul>
+            <% else %>
+                <div class="no-tasks">
+                    <i class='bx bx-search'></i>
+                    <p>There are no tasks available.</p>
+                </div>
+            <% end %>
+        </div>
     </div>
 </turbo-frame>
