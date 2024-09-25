@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap');
 * {
     margin: 0;
     padding: 0;
-
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
 }
 body{
     width: 100%;
@@ -36,7 +38,7 @@ img {
 .sidebar {
     grid-area: sidebar;
     padding: 20px;
-    border-right: 1px solid #e6f7ff;
+    border-right: 1px solid #e8e9e8;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -111,7 +113,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    border-bottom: 1px solid #e6f7ff;
+    border-bottom: 0.5px solid #e8e9e8;
 }
 
 .search {
@@ -188,4 +190,33 @@ main h1 {
     font-size: 28px;
     margin-bottom: 20px;
     color: #333; 
+}
+
+/* tasks css */
+.task-container{
+    min-height: 100vh;
+}
+.task-title{
+    margin-bottom: 0;
+}
+.task-description{
+    margin: 0;
+    text-align: center;
+    color: #e8e9e8;
+}
+.create button {
+    padding: 15px 25px;
+    border-radius: 1em;
+    float: right;
+    background-color: #007FFF;
+    color: #ffffff;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
 }
