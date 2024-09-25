@@ -2,8 +2,8 @@
   <aside class="sidebar">
     <!-- Logo and Brand Name -->
     <div class="logo">
-        <img src="<%= asset_path 'logo.png' %>" alt="not found">
-        <p>Tenko</p>
+      <img src="<%= asset_path 'logo.png' %>" alt="not found">
+      <p>Tenko</p>
     </div>
 
     <!-- First Menu -->
@@ -27,8 +27,8 @@
 
     <!-- Pages Section with Plus Icon -->
     <div class="pages-header">
-        <h1>Pages</h1>
-        <i class='bx bx-plus'></i>
+      <h1>Pages</h1>
+      <i class='bx bx-plus'></i>
     </div>
 
     <!-- Second Menu -->
@@ -46,8 +46,9 @@
         <a href="#"><i class='bx bx-wallet'></i> File Manager</a>
       </li>
       <li>
-        <a href="#"><i class='bx bx-task'></i> Task</a>
+       <%= link_to "<i class='bx bx-task'></i> Task".html_safe, tasks_path, data: { turbo_frame: "tasks_frame" } %>
       </li>
+
       <li>
         <a href="#"><i class='bx bx-book'></i> Invoices</a>
       </li>
@@ -61,28 +62,29 @@
 
     <!-- Footer (Optional) -->
     <footer>
-        <p>Copyright 2024</p>
+      <p>Copyright 2024</p>
     </footer>
   </aside>
 
   <header class="header">
-  <div class="search">
+    <div class="search">
       <i class='bx bx-search-alt-2'></i>
       <input type="text" placeholder="Search" />
-  </div>
-  <div class="icons">
-          <li><i class='bx bxs-bell'></i></li>
-          <li><i class='bx bx-moon'></i></li>
-          <li><i class='bx bx-cog' ></i></li>
-  </div>
-  <div class="profile">
-    <img src="<%= asset_path 'profile.png' %>" alt="Profile Image">
-    <p>Belam Muia</p>
-  </div>
-
+    </div>
+    <div class="icons">
+      <li><i class='bx bxs-bell'></i></li>
+      <li><i class='bx bx-moon'></i></li>
+      <li><i class='bx bx-cog'></i></li>
+    </div>
+    <div class="profile">
+      <img src="<%= asset_path 'profile.png' %>" alt="Profile Image">
+      <p>Belam Muia</p>
+    </div>
   </header>
 
   <main>
-    <h1>Welcome to the Dashboard</h1>
+    <%= turbo_frame_tag "tasks_frame" do %>
+      <h1>Welcome to the Dashboard</h1>
+    <% end %>
   </main>
 </div>
