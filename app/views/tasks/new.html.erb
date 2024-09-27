@@ -1,0 +1,14 @@
+<!-- app/views/tasks/new.html.erb -->
+<turbo-frame id="tasks_frame">
+  <div class="new-task-container">
+    <div class="form-style">
+      <div class="close-button-container">
+        <p>Create a new task</p>
+        <%= link_to "<i class='bx bx-x'></i>".html_safe, tasks_path, class: "back" %>
+      </div>
+      <h1 class="task-title">Create Task</h1>
+      <div class="sidebar-divider"></div>
+      <%= render 'form' %>  <!-- This renders the form partial -->
+    </div>
+  </div>
+</turbo-frame>
