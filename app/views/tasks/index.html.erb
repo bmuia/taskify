@@ -1,17 +1,24 @@
-<turbo-frame id="tasks_frame">
+<turbo-frame id="tasks_frame"> 
     <div class="task-container">
         <h1 class="task-title">Tasks</h1>
-        <p class="task-description">Manage your tasks efficiently</p>
         <div class="create">
-            <button><i class='bx bx-plus-medical'></i> Create</button>
+            <%= link_to "<i class='bx bx-plus-medical'></i> Create".html_safe, new_task_path, class: "create-button" %>
         </div>
         <div class="task-list">
             <% if @tasks.any? %>
-                <ul>
-                    <% @tasks.each do |task| %>
-                        <li><strong><%= task.title %></strong>: <%= task.description %></li>
-                    <% end %>
-                </ul>
+                <% @tasks.each do |task| %>
+                    <div class="task-box">
+                      <div class="open">
+                        <%= link_to task_path(task), class: 'task-link-i' do %>
+                          <button>open</button>
+                        <% end %>
+                        </div>
+                        <h3 class="task-box-title"><%= task.title %></h3>
+                        <p class="task-box-description"><%= task.description %></p>
+                        <div class="sidebar-divider"></div>
+                        <p class="task-box-end-date"><%= task.end_date %></p>
+                    </div>
+                <% end %>
             <% else %>
                 <div class="no-tasks">
                     <i class='bx bx-search'></i>
