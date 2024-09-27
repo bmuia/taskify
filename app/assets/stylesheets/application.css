@@ -122,7 +122,7 @@ footer {
     border-radius: 5px;
     padding: 5px;
     background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  /* This should work */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);  
 }
 
 .search i {
@@ -162,7 +162,7 @@ footer {
 .profile {
     display: flex;
     align-items: center;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);  /* This should work */
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);  
     border-radius: 2em;
     padding: 5px;
 }
@@ -196,6 +196,11 @@ main h1 {
     height: 100vh;
 }
 
+.task-container .task-title h1{
+    text-align: start;
+    margin-bottom: 0;
+}
+
 .create{
     display: flex;
     justify-content: end;
@@ -222,7 +227,6 @@ main h1 {
     display: flex;
     flex-wrap: wrap; 
     gap: 20px;
-    background: linear-gradient(to bottom right, #f0f4ff, #e8e9e8);
     height: 100vh;
     padding: 20px;
     text-decoration: none;
@@ -296,14 +300,16 @@ main h1 {
 .no-tasks {
     color: #e8e9e8;
     font-size: 1.5em;
+    padding: 20px;
+    border-radius: 10px; 
+    width: 100%;
+}
+
+.no-tasks-1 {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Full height to center vertically */
-    background: rgba(255, 255, 255, 0.8); /* White background with fading effect */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
+
 }
 
 .no-tasks i {
@@ -319,7 +325,6 @@ main h1 {
     align-items: center;
     height: 100vh; 
     padding: 0;
-    background: linear-gradient(to bottom right, #f0f4ff, #e8e9e8);
     border-radius: 15px;
 }
 
@@ -335,7 +340,6 @@ main h1 {
 .task-title {
     font-size: 20px;
     margin-top: 10px;
-    margin-bottom: 10px;
     color: #333;
 }
 
@@ -426,7 +430,6 @@ main h1 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
-    text-align: center;
 }
 
 .task-detail h4 {
@@ -469,6 +472,12 @@ main h1 {
 
 .delete-button {
     background-color: #dc3545;
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
 }
 
 .back-1 .back-button {
