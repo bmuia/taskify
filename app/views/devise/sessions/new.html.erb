@@ -1,0 +1,61 @@
+<div class="login-container">
+  <div class="login-info-box">
+    <img src="https://plus.unsplash.com/premium_photo-1723299602337-f8e535e9e5d2?q=80&w=2828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="not found">
+  </div>
+
+  <div class="login-form-box">
+    <div class="social-login-buttons">
+      <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
+        <%= f.submit "Sign up with Google", class: "btn btn-google" %>
+      <% end %>
+      <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
+        <%= f.submit "Sign up with Github", class: "btn btn-github" %>
+      <% end %>
+      <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
+        <%= f.submit "Sign up with Twitter", class: "btn btn-twitter" %>
+      <% end %>
+    </div>
+
+
+    <div class="divider">OR</div>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="login-input-field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "login-form-control", placeholder: "Your email" %>
+      </div>
+
+      <div class="login-input-field">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password", class: "login-form-control", placeholder: "Password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="login-remember-me-field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="login-form-actions">
+        <%= f.submit "Log in", class: "login-btn-primary" %>
+      </div>
+    <% end %>
+
+    <div class="forgot-password">
+      <%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
+        <%= link_to "Forgot your password?", new_password_path(resource_name), class: "forgot-password-link" %>
+      <% end %>
+    </div>
+
+    <div class="signup-prompt">
+      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+        <p>
+          Don't have an account? <%= link_to "Sign up", new_registration_path(resource_name), class: "signup-link" %>
+        </p>
+      <% end %>
+    </div>
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>

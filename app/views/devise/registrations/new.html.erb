@@ -1,0 +1,60 @@
+<div class="registration-container">
+  <div class="info-box">
+        <img src="https://plus.unsplash.com/premium_photo-1723299602337-f8e535e9e5d2?q=80&w=2828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="not found">
+  </div>
+
+  <div class="form-box">
+    <div class="social-login-buttons">
+      <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
+        <%= f.submit "Sign up with Google", class: "btn btn-google" %>
+      <% end %>
+      <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
+        <%= f.submit "Sign up with Github", class: "btn btn-github" %>
+      <% end %>
+      <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
+        <%= f.submit "Sign up with Twitter", class: "btn btn-twitter" %>
+      <% end %>
+    </div>
+
+    <div class="divider">OR</div>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="input-field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Your email" %>
+      </div>
+
+      <div class="input-field">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
+      </div>
+
+      <div class="input-field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Confirm password" %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit "Continue for free", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+         <div class="signup-prompt">
+      <%- if controller_name != 'sessions' %>
+        <p>
+          Have an account? <%= link_to "Log in", new_session_path(resource_name), class: "signup-link" %>
+        </p>
+      <% end %>
+    </div>
+    <p>
+      By signing up, you agree to Taskify <a href="#">terms of service</a> and
+      <a href="#">privacy policy</a>.
+    </p>
+
+  
+  </div>
+</div>

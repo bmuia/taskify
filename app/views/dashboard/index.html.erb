@@ -53,11 +53,13 @@
         <a href="#"><i class='bx bx-book'></i> Invoices</a>
       </li>
       <li>
-        <a href="#"><i class='bx bx-news'></i> Articles</a>
-      </li>
-      <li>
         <a href="#"><i class='bx bx-support'></i> Support Ticket</a>
       </li>
+       <div class="btn-secondary">
+         <%= button_to "<i class='bx bx-log-out-circle'></i> Logout".html_safe, destroy_user_session_path, method: :delete, data: { confirm: "Are you sure you want to log out?" }, class: "btn btn-danger" %>
+       </div>
+
+
     </ul>
 
     <!-- Footer (Optional) -->
