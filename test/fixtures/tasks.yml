@@ -2,8 +2,14 @@
 
 one:
   title: MyString
-  description: MyText
+  description: MyString
+  start_date: MyString
+  end_date: MyString
+  status: MyString
 
 two:
   title: MyString
-  description: MyText
+  description: MyString
+  start_date: MyString
+  end_date: MyString
+  status: MyString

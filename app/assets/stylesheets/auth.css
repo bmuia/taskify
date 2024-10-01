@@ -1,0 +1,39 @@
+.social-login-buttons .btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .btn-google {
+    background-color: #db4437;
+  }
+  
+  .btn-google:hover {
+    background-color: #c33a2d;
+  }
+  
+  .btn-github {
+    background-color: #333;
+  }
+  
+  .btn-github:hover {
+    background-color: #1d1d1d;
+  }
+  
+  .btn-twitter {
+    background-color: #1da1f2;
+  }
+  
+  .btn-twitter:hover {
+    background-color: #0d8de0;
+  }
+  

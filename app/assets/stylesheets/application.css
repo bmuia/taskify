@@ -192,3 +192,32 @@ main h1 {
     color: #333; 
 }
 
+.btn-secondary{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.btn-secondary button{
+    display: inline-block; 
+    padding: 10px 20px;
+    background-color: #ff4757;
+    color: white; 
+    font-weight: bold;
+    font-size: 15px;
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+    cursor: pointer; 
+  }
+  
+  .btn-secondary button:hover {
+    background-color: #ff6b81; 
+  }
+  
+  .btn-secondary button:active {
+    background-color: #e84118;
+  }
+  
