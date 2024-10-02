@@ -6,13 +6,13 @@
   <div class="login-form-box">
     <div class="social-login-buttons">
       <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
-        <%= f.submit "Sign up with Google", class: "btn btn-google" %>
+        <%= f.submit "Sign in with Google", class: "btn btn-google" %>
       <% end %>
       <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
-        <%= f.submit "Sign up with Github", class: "btn btn-github" %>
+        <%= f.submit "Sign in with Github", class: "btn btn-github" %>
       <% end %>
       <%= form_for "Login", url: omniauth_authorize_path(resource_name, :google_oauth2), method: :post, data: { turbo: "false" } do |f| %>
-        <%= f.submit "Sign up with Twitter", class: "btn btn-twitter" %>
+        <%= f.submit "Sign in with Twitter", class: "btn btn-twitter" %>
       <% end %>
     </div>
 
