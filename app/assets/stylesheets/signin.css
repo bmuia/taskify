@@ -108,3 +108,24 @@
   margin: 20px 0;
   color: #888;
 }
+
+@media screen and (max-width: 693px) {
+  .login-info-box img{
+    width: 300px;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .login-container{
+    width: 100%;
+  }
+
+  .login-info-box img{
+    display: none;
+  }
+
+  .login-form-box {
+    width: 100%;
+  }
+}
