@@ -37,3 +37,11 @@
     background-color: #0d8de0;
   }
   
+  @media screen and (max-width: 600px) {
+    .social-login-buttons .btn{
+      padding: 12px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    
+  }

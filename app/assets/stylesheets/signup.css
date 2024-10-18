@@ -113,4 +113,22 @@
   p a:hover {
     text-decoration: underline;
   }
-  
+
+  @media only screen and (max-width: 693px)  {
+    .info-box img{
+      width: 300px;
+      height: 80vh;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .registration-container {
+      width: auto;
+    }
+    .info-box img{
+      display: none;
+    }
+    
+  }
+
+
